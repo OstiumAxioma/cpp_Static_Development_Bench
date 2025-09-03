@@ -81,10 +81,25 @@ if exist .vs rmdir /s /q .vs 2>nul
 echo Clean complete.
 echo.
 
+:: 检查是否需要传递Qt5路径参数
+set CMAKE_ARGS=-G "Visual Studio 17 2022" -A x64
+
+:: 如果用户提供了Qt5路径作为参数
+if not "%~1"=="" (
+    echo Using Qt5 path: %~1
+    set CMAKE_ARGS=%CMAKE_ARGS% -DQt5_DIR="%~1/lib/cmake/Qt5"
+)
+
+:: 如果用户提供了VTK路径作为第二个参数
+if not "%~2"=="" (
+    echo Using VTK path: %~2
+    set CMAKE_ARGS=%CMAKE_ARGS% -DVTK_DIR="%~2"
+)
+
 :: 配置项目
 echo Configuring TemplateLib project...
-echo Running: cmake .. -G "Visual Studio 17 2022" -A x64
-cmake .. -G "Visual Studio 17 2022" -A x64
+echo Running: cmake .. %CMAKE_ARGS%
+cmake .. %CMAKE_ARGS%
 
 if errorlevel 1 (
     echo.

@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/header",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/build",
+                "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include",
+                "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include/QtCore",
+                "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include/QtGui",
+                "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include/QtWidgets",
+                "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include/QtOpenGL",
+                "D:/code/vtk8.2.0/VTK-8.2.0/include/vtk-8.2",
+                "D:/code/vtk8.2.0/VTK-8.2.0/include/vtk-8.2/vtkRenderingOpenGL2",
+                "D:/code/vtk8.2.0/VTK-8.2.0/include/vtk-8.2/vtkGUISupportQt",
+                "D:/code/vtk8.2.0/VTK-8.2.0/include/vtk-8.2/vtkGUISupportQtOpenGL"
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE",
+                "WIN32",
+                "_WIN32",
+                "WIN32_LEAN_AND_MEAN",
+                "NOMINMAX",
+                "QT_DEPRECATED_WARNINGS",
+                "VTK_QT_FOUND"
+            ],
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "windows-msvc-x64",
+            "compilerArgs": [
+                "/utf-8"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C:/Qt/Qt5.12.9/5.12.9/msvc2017_64/include",
+                    "D:/code/vtk8.2.0/VTK-8.2.0/include/vtk-8.2"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}

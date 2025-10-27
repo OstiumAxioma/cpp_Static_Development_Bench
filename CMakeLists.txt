@@ -142,23 +142,23 @@ endif()
 # 查找静态库文件
 find_library(TEMPLATE_LIB_RELEASE 
     NAMES TemplateLib
-    PATHS ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    PATHS ${CMAKE_CURRENT_SOURCE_DIR}/static/build/lib/Release
     NO_DEFAULT_PATH
 )
 
 find_library(TEMPLATE_LIB_DEBUG
     NAMES TemplateLib_d
-    PATHS ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    PATHS ${CMAKE_CURRENT_SOURCE_DIR}/static/build/lib/Release
     NO_DEFAULT_PATH
 )
 
 # 检查是否找到静态库
 if(NOT TEMPLATE_LIB_RELEASE)
-    message(WARNING "TemplateLib.lib not found in ${CMAKE_CURRENT_SOURCE_DIR}/lib")
+    message(WARNING "TemplateLib.lib not found in ${CMAKE_CURRENT_SOURCE_DIR}/static/build/lib/Release")
 endif()
 
 if(NOT TEMPLATE_LIB_DEBUG)
-    message(WARNING "TemplateLib_d.lib not found in ${CMAKE_CURRENT_SOURCE_DIR}/lib")
+    message(WARNING "TemplateLib_d.lib not found in ${CMAKE_CURRENT_SOURCE_DIR}/static/build/lib/Release")
 endif()
 
 # 链接库
